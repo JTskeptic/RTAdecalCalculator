@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTA Decal Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <img src="AGWraps Logo Shield BW.png" alt="agwraps logo" height="50">
+    <br>
+    <br>
+    <div class="wrapper">
+        <div class="calculator">
+            <div class="left-column">
+                <div class="input-fields">
+                    <input type="number" id="height" class="height" placeholder="height" min="0" max="50" required autofocus="true">
+                    <input type="number" id="width" class="width" placeholder="width" min="0" max="50" required>
+                    <input type="number" id="quantity" class="quantity" placeholder="quantity" min="1" required>
+                    <input type="number" id="price" class="price" placeholder="sqft price" min="5" max="20" required>
+                </div>
+                <div class="calculate">
+                    <button id="submitButton" class="submit">quote</button>
+                </div>
+            </div>
+
+            <div class="right-column">
+                <div class="results">
+                    <h1 id="final-price"></h1>
+                    <br>
+                    <h4 id="final-price-each"></h4>
+                    <br>
+                    <p id="final-sqft"></p>
+                    <br>
+                    <p id="final-quantity"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
