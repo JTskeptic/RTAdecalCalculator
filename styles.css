@@ -1,9 +1,11 @@
 :root {
     --main-bg-color: #efeff0;
     --darker-bg-color: #eeeeee;
-    --dark-accent-color: rgba(60, 60, 60, 0.5);
+    --dark-accent-color: rgba(60,60,60,0.5);
     --light-accent-color: rgba(255,255,255,0.5);
     --agwraps-yellow: #ffd200;
+    --dark-text: rgba(60,60,60,0.5);
+    --light-text: rgba(255,255,255,0.5);
 }
 
 * {
@@ -70,7 +72,7 @@ div.calculator {
     border: 0;
     border-bottom: 2px solid var(--dark-accent-color);
     padding: 10px;
-    color: var(--dark-accent-color);
+    color: var(--dark-text);
     width: 90%;
     transition-duration: 0.4s;
     font-size: 0.8rem;
@@ -101,7 +103,7 @@ div.calculator {
         inset 5px 5px 10px var(--dark-accent-color);
     background-color: var(--main-bg-color);
     padding: 10%;
-    color: var(--dark-accent-color);
+    color: var(--dark-text);
     font-size: 1.25rem;
     cursor: pointer;
 }
@@ -111,7 +113,7 @@ div.calculator {
     box-shadow: 
         inset -10px -10px 15px var(--light-accent-color), 
         inset 10px 10px 15px var(--dark-accent-color);
-    font-size: 1.05rem;
+    font-size: 1.10rem;
 }
 
 .submit:focus {
@@ -120,7 +122,7 @@ div.calculator {
 }
 
 .submit:active {
-    color: var(--dark-accent-color);
+    color: var(--dark-text);
 }
 
 .right-column {
@@ -133,9 +135,41 @@ div.calculator {
     box-shadow: 
     inset -10px -10px 15px var(--light-accent-color), 
     inset 5px 5px 10px var(--dark-accent-color);
+    min-height: 75%;
 }
 
 .right-column .results {
-    color: var(--dark-accent-color);    
+    color: var(--dark-text);    
 }
 
+#dark-light {
+    border-radius: 50%;
+    height: 0.2rem;
+    width: 0.2rem;
+    border: 2px solid var(--main-bg-color);
+    outline: none;
+    transition-duration: 0.5s;
+    box-shadow: 
+        inset -10px -10px 15px var(--light-accent-color), 
+        inset 5px 5px 10px var(--dark-accent-color);
+    background-color: var(--main-bg-color);
+    padding: 2.5%;
+    cursor: pointer;
+}
+
+#dark-light:hover {
+    transition-duration: 0.5s;
+    box-shadow: 
+        inset -10px -10px 15px var(--light-accent-color), 
+        inset 10px 10px 15px var(--dark-accent-color);
+    font-size: 1.05rem;
+}
+
+#dark-light:focus {
+    color: var(--agwraps-yellow);
+    transition-duration: 0.25s;
+}
+
+#dark-light:active {
+    color: var(--dark-text);
+}
