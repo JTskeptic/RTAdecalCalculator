@@ -85,3 +85,42 @@ document.querySelector('#submitButton').addEventListener("click", function(){
     document.querySelector('#final-quantity').innerHTML = finalQuantity + ' actual quantity';
 
     });
+
+    //dark mode toggle
+
+    let root = document.documentElement;
+    let currentStyle = window.getComputedStyle;
+
+    document.getElementById('dark-light').addEventListener ('click', () => {
+
+        if (root.style.getPropertyValue('--main-bg-color') === '#efeff0') {
+            root.style.setProperty('--main-bg-color', '#333');
+        } else {
+            root.style.setProperty ('--main-bg-color', '#efeff0');
+        }
+        
+        if (root.style.getPropertyValue('--darker-bg-color') === '#eeeeee') {
+            root.style.setProperty('--darker-bg-color', '#1f1f1f');
+        } else {
+            root.style.setProperty('--darker-bg-color', '#eeeeee');
+        }
+
+        if (root.style.getPropertyValue('--dark-accent-color') === 'rgba(60,60,60,0.5)') {
+            root.style.setProperty('--dark-accent-color', '#1f1f1f');
+        } else {
+            root.style.setProperty ('--dark-accent-color', 'rgba(60,60,60,0.5)');
+        }
+
+        if (root.style.getPropertyValue('--light-accent-color') === 'rgba(255,255,255,0.5)') {
+            root.style.setProperty('--light-accent-color', 'rgba(45,45,45,0.5)');
+        } else {
+            root.style.setProperty ('--light-accent-color', 'rgba(255,255,255,0.5)');
+        }
+
+        if (root.style.getPropertyValue('--dark-text') === 'rgba(60,60,60,0.5)') {
+            root.style.setProperty('--dark-text', 'rgba(255,255,255,0.5)');
+        } else {
+            root.style.setProperty ('--dark-text', 'rgba(60,60,60,0.5)');
+        }
+
+    });
